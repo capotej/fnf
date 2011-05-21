@@ -31,14 +31,14 @@ Start a rails project
 ```rails new foo```
 
 Start the server
-```cd foo
+```cd foo```
 
-rails server```
+```rails server```
 
 Clone this project
-```git clone git@github.com:capotej/fnf.git
+```git clone git@github.com:capotej/fnf.git```
 
-cd fnf```
+```cd fnf```
 
 Start the fnf server
 ```bin/fnf```
