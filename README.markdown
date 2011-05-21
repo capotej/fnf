@@ -16,12 +16,13 @@ Start the server:
 
 Add to gemfile, vendor the gem, gem install, etc:
 
-```gem 'fnf'``` or ```gem install fnf```
+```gem 'fnf' or gem install fnf```
 
 From anywhere:
 
-```require 'fnf'```
-```Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
+```require 'fnf'
+
+Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
 
 
 ## Kicking the tires
@@ -31,12 +32,14 @@ Start a rails project
 ```rails new foo```
 
 Start the server
-```cd foo```
-```rails server```
+```cd foo
+
+rails server```
 
 Clone this project
-```git clone git@github.com:capotej/fnf.git```
-```cd fnf```
+```git clone git@github.com:capotej/fnf.git
+
+cd fnf```
 
 Start the fnf server
 ```bin/fnf```
