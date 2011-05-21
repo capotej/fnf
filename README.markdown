@@ -7,13 +7,14 @@ Fire and Forget replaces the need to write resque tasks or delayed jobs to fire 
 
 ## Usage (worker)
 
-Start the server:
+Start the server
+
 ```fnf```
 
 
 ## Usage (client)
 
-Add to gemfile, vendor the gem, gem install, etc:
+Add to gemfile, vendor the gem, gem install, etc
 
 ```gem 'fnf'``` or ```gem install fnf```
 
