@@ -24,4 +24,27 @@ From anywhere:
 ```Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
 
 
+## Kicking the tires
+
+Start a rails project
+
+```rails new foo```
+
+Start the server
+```cd foo```
+```rails server```
+
+Clone this project
+```git clone git@github.com:capotej/fnf.git```
+```cd fnf```
+
+Start the fnf server
+```bin/fnf```
+
+Run the test
+```ruby fnf_test.rb```
+
+You should see a request for /asdd hit your rails logs
+
+
 ![Set and Forget It](http://naturallyalise.com/blog/wp-content/uploads/2011/03/set-it-and-forget-it-ronco-rotisserie.jpg)
