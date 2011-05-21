@@ -37,9 +37,11 @@ Start the server
 
 Clone this project
 
-```git clone git@github.com:capotej/fnf.git```
+```
+git clone git@github.com:capotej/fnf.git
 
-```cd fnf```
+cd fnf
+```
 
 Start the fnf server
 
