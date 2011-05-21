@@ -17,7 +17,7 @@ Start the server
 
 Add to gemfile, or vendor the gem
 
-```gem 'fnf'````
+```gem 'fnf'```
 
 From a controller or model
 
