@@ -8,6 +8,7 @@ Fire and Forget replaces the need to write resque tasks or delayed jobs to fire 
 ## Usage (worker)
 
 Start the server
+
 ```fnf```
 
 
