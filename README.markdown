@@ -36,14 +36,17 @@ Start the server
 ```rails server```
 
 Clone this project
+
 ```git clone git@github.com:capotej/fnf.git```
 
 ```cd fnf```
 
 Start the fnf server
+
 ```bin/fnf```
 
 Run the test
+
 ```ruby fnf_test.rb```
 
 You should see a request for /asdd hit your rails logs
