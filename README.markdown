@@ -7,20 +7,20 @@ Fire and Forget replaces the need to write resque tasks or delayed jobs to fire 
 
 ## Usage (worker)
 
-Start the server
+Start the server:
 
 ```fnf```
 
-(add this to rc.local, or a startup script)
 
-## Usage (client, rails)
+## Usage (client)
 
-Add to gemfile, or vendor the gem
+Add to gemfile, vendor the gem, gem install, etc:
 
 ```gem 'fnf'```
 
-From a controller or model
+From anywhere:
 
+```require 'fnf'```
 ```Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
 
 
