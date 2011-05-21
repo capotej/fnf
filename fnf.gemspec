@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "fnf"
 
   s.add_dependency 'daemons'
+  s.add_dependency 'mkfifo'
   s.add_dependency 'ruby-fifo'
   s.add_dependency 'typhoeus'
 

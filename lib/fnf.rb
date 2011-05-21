@@ -1,3 +1,9 @@
+require 'typhoeus'
+require 'daemons'
+require 'fifo'
+
 module Fnf
-  # Your code goes here...
+  autoload :Connection, 'fnf/connection'
+  autoload :Worker, 'fnf/worker'
+  autoload :Client, 'fnf/client'
 end
