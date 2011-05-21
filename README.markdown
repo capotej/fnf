@@ -15,13 +15,13 @@ Start the server:
 
 Add to gemfile, vendor the gem, gem install, etc:
 
-```gem 'fnf' or gem install fnf```
+```gem 'fnf'``` or ```gem install fnf```
 
 From anywhere:
 
-```require 'fnf'
+```require 'fnf'```
 
-Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
+```Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
 
 
 ## Kicking the tires
