@@ -8,7 +8,10 @@ Fire and Forget replaces the need to write resque tasks or delayed jobs to fire 
 ## Usage (worker)
 
 Start the server
-```fnf```
+
+```
+fnf
+```
 
 
 ## Usage (client)
@@ -19,16 +22,19 @@ Add to gemfile, vendor the gem, gem install, etc
 
 From anywhere:
 
-```require 'fnf'```
-
-```Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
+```
+require 'fnf'
+Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })
+```
 
 
 ## Kicking the tires
 
 Start a rails project
 
-```rails new foo```
+```
+rails new foo
+```
 
 Start the server
 ```
