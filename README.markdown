@@ -16,7 +16,7 @@ Start the server:
 
 Add to gemfile, vendor the gem, gem install, etc:
 
-```gem 'fnf'```
+```gem 'fnf'``` or ```gem install fnf```
 
 From anywhere:
 
