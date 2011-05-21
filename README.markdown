@@ -24,6 +24,4 @@ From a controller or model
 ```FNF.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
 
 
-
-
-
+![Set and Forget It](http://naturallyalise.com/blog/wp-content/uploads/2011/03/set-it-and-forget-it-ronco-rotisserie.jpg)
