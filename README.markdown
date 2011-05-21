@@ -37,6 +37,7 @@ rails new foo
 ```
 
 Start the server
+
 ```
 cd foo
 rails server
