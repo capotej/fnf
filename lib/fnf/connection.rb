@@ -14,16 +14,8 @@ module Fnf
 
         params = args.last || {}
 
-        response  = http.send(verb, path, :params => params)
-                      
-        result    = parse(response.b)
+        http.send(verb, path, :params => params)
 
-        unless [200,201].include?(response.code)
-          msg = result.nil? ? response.body : "#{result.error} #{result.message}"
-          raise ConnectionError, msg 
-        end
-
-        result
       end
     end
 

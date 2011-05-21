@@ -9,7 +9,7 @@ Fire and Forget replaces the need to write resque tasks or delayed jobs to fire 
 
 Start the server
 
-```fnfd start```
+```fnf```
 
 (add this to rc.local, or a startup script)
 
@@ -21,7 +21,7 @@ Add to gemfile, or vendor the gem
 
 From a controller or model
 
-```FNF.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
+```Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
 
 
 

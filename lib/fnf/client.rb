@@ -4,8 +4,10 @@ module Fnf
     
     def self.queue(hsh)
       verb = get_verb(hsh)
-      params = hsh[:params]
       url = hsh[verb]
+      params = hsh[:params]
+      pipe = Fifo.new('/tmp/fnfq')
+      pipe.puts [verb,url,params].to_json
     end
 
     def self.get_verb(hsh)
