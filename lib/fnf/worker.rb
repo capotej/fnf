@@ -1,13 +1,21 @@
 module Fnf
-  class Worker
+  
+  module RequestWorker
+    def initialize(pipe)
+      @pipe = pipe
+    end
 
+    def notify_readable
+      puts @pipe.readline
+      sleep 2
+    end
+  end
+  class Worker
     def self.run
       pipe = Fifo.new('/tmp/fnfq')
-      while contents = pipe.readline
-        begin
-          payload = JSON.parse(contents)
-          Connection.send(payload[0], payload[1], payload[2])
-        rescue
+      EventMachine::run do
+        EventMachine::watch(pipe.to_io, RequestWorker, pipe) do |c|
+          c.notify_readable = true
         end
       end
     end
