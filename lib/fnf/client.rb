@@ -1,10 +1,4 @@
 module Fnf
-
-  class Wrapper
-    include FifoWriter
-  end
-  
-  WRAPPER = Wrapper.new
   
   class Client
 
@@ -14,7 +8,7 @@ module Fnf
       verb = get_verb(hsh)
       url = hsh[verb]
       params = hsh[:params]
-      WRAPPER.write_to_fifo [verb,url,params].to_json
+      FifoWriter.write_to_fifo "#{[verb,url,params].to_json}\n"
     end
 
 

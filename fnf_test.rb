@@ -2,7 +2,7 @@ $: << "./lib"
 require 'fnf'
 
 start_dt = Time.now
-10_000.times do |i|
+10000.times do |i|
   Fnf::Client.queue(:get => "http://127.0.0.1:3000/#{i}#{ARGV[0]}")
 end
 end_dt = Time.now
