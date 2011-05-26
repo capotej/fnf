@@ -3,6 +3,7 @@ require 'fifo'
 require 'json'
 require 'eventmachine'
 require 'typhoeus'
+require 'em-http-request'
 $:.unshift File.expand_path("../../",__FILE__)
 require 'fifowriter'
 
