@@ -6,10 +6,11 @@ module Fnf
     end
 
     def notify_readable
-      puts @pipe.readline
-      sleep 2
+      payload = JSON.parse(@pipe.readline)
+      EventMachine::HttpRequest.new(payload[1]).send(payload[0], :query => payload[2])
     end
   end
+
   class Worker
     def self.run
       pipe = Fifo.new('/tmp/fnfq')
