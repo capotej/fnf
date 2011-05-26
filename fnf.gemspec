@@ -17,8 +17,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'daemons'
   s.add_dependency 'mkfifo'
   s.add_dependency 'ruby-fifo'
-  s.add_dependency 'em-http-request'
-  s.add_dependency 'eventmachine'
+  s.add_dependency 'typhoeus'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
