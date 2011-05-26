@@ -6,13 +6,8 @@ module Fnf
     end
 
     def notify_readable
-      data = @pipe.readline
-      fetch = proc {
-        payload = JSON.parse(data)
-        Connection.send(payload[0], payload[1], payload[2])
-      }
-      noop = proc { }
-      EM.defer fetch, noop
+      payload = JSON.parse(@pipe.readline)
+      EventMachine::HttpRequest.new(payload[1]).send(payload[0], :query => payload[2])
     end
   end
 
