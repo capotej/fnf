@@ -3,46 +3,64 @@
 
 ## Intro
 
-Fire and Forget replaces the need to write resque tasks or delayed jobs to fire off web requests (usually notification webhooks or a anti-spam service, like defensio or akismet). A single worker reads and executes web requests from a blocking named pipe, while clients queue up them up in a non blocking manner. It uses typhoeus internally to execute the web requests for maximum speed.
+Fire and Forget replaces the need to write resque tasks or delayed jobs to fire off web requests (usually notification webhooks or a anti-spam service, like defensio or akismet). A single worker reads and executes web requests from a named pipe, while clients write to that pipe. It uses typhoeus internally to execute the web requests for maximum speed.
 
 ## Usage (worker)
 
-Start the server:
+Start the server
 
-```fnf```
+```
+fnf
+```
 
 
 ## Usage (client)
 
-Add to gemfile, vendor the gem, gem install, etc:
+Add to gemfile, vendor the gem, gem install, etc
 
 ```gem 'fnf'``` or ```gem install fnf```
 
 From anywhere:
 
-```require 'fnf'```
-```Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })```
+```
+require 'fnf'
+Fnf::Client.queue({:post => "http://api.akismet.com/process", :params => { :thing => "2123" })
+```
 
 
 ## Kicking the tires
 
 Start a rails project
 
-```rails new foo```
+```
+rails new foo
+```
 
 Start the server
-```cd foo```
-```rails server```
+
+```
+cd foo
+rails server
+```
 
 Clone this project
-```git clone git@github.com:capotej/fnf.git```
-```cd fnf```
+
+```
+git clone git@github.com:capotej/fnf.git
+cd fnf
+```
 
 Start the fnf server
-```bin/fnf```
+
+```
+bin/fnf
+```
 
 Run the test
-```ruby fnf_test.rb```
+
+```
+ruby fnf_test.rb
+```
 
 You should see a request for /asdd hit your rails logs
 
