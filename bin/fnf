@@ -3,4 +3,3 @@
 $: << "./lib"
 require "fnf"
 Fnf::Worker.run
-
