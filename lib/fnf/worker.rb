@@ -3,12 +3,17 @@ module Fnf
   module RequestWorker
     def initialize(pipe)
       @pipe = pipe
-      @buff = []
     end
 
     def notify_readable
-      payload = MessagePack.unpack(@pipe.readline.chomp)
-      EventMachine::HttpRequest.new(payload[1]).send(payload[0], :query => payload[2])
+      data = @pipe.readline.chomp
+      fetch = proc {
+        payload = MessagePack.unpack(data)
+        Connection.send(payload[0], payload[1], payload[2])
+      }
+      noop = proc { }
+      EM.defer fetch, noop
+
     end
   end
 
