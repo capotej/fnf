@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 require "fnf/version"
 
@@ -14,13 +13,15 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "fnf"
 
-  s.add_dependency 'daemons'
   s.add_dependency 'mkfifo'
   s.add_dependency 'ruby-fifo'
   s.add_dependency 'em-http-request'
   s.add_dependency 'eventmachine'
   s.add_dependency 'msgpack'
-
+  s.platform = Gem::Platform::RUBY
+  
+  s.extensions = Dir["ext/**/extconf.rb"]
+  
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
