@@ -1,12 +1,13 @@
 module Fnf
-  
+
   module RequestWorker
     def initialize(pipe)
       @pipe = pipe
+      @buff = []
     end
 
     def notify_readable
-      payload = JSON.parse(@pipe.readline)
+      payload = MessagePack.unpack(@pipe.readline.chomp)
       EventMachine::HttpRequest.new(payload[1]).send(payload[0], :query => payload[2])
     end
   end

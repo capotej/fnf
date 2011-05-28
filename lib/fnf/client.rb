@@ -8,7 +8,7 @@ module Fnf
       verb = get_verb(hsh)
       url = hsh[verb]
       params = hsh[:params]
-      FifoWriter.write_to_fifo "#{[verb,url,params].to_json}\n"
+      FifoWriter.write_to_fifo "#{[verb,url,params].to_msgpack}\n"
     end
 
 
