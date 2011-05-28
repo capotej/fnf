@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'mkfifo'
   s.add_dependency 'ruby-fifo'
-  s.add_dependency 'em-http-request'
   s.add_dependency 'eventmachine'
   s.add_dependency 'msgpack'
   s.platform = Gem::Platform::RUBY
