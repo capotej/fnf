@@ -13,9 +13,10 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "fnf"
 
-  s.add_dependency 'mkfifo'
   s.add_dependency 'eventmachine'
   s.add_dependency 'msgpack'
+  s.add_dependency 'typhoeus'
+
   s.platform = Gem::Platform::RUBY
   
   s.extensions = Dir["ext/**/extconf.rb"]

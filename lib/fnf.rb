@@ -1,9 +1,6 @@
 require 'rubygems'
-require 'daemons'
-require 'json'
 require 'eventmachine'
 require 'typhoeus'
-require 'em-http-request'
 require 'msgpack'
 require 'fifowriter/fifowriter'
 
